@@ -6,12 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="sprint.js"></script>
-    <title>Document</title>
+    <title>Decifre-me</title>
 </head>
 
 <body>
+    <form>
+        <div class="formulario">
+            <label for="inserção">Codifique aqui! ⇓ </label><br>
+            <input type="text" id="inserção"><br><br>
+            <label>Escolha a codificação:</label><br><br>
+        </div>
 
-    <h1>Codifique aqui</h1>
+        <div id="codificação">
+            <select name="códigos" id="códigos">
+            <option value="Cifra">Cifra de César</option>
+            <option value="Base64">Base 64</option>
+        </select><br><br>
+
+        <div id="EntradaPrincipal">
+            <label for="Principal">Coloque uma entrada:</label><br><br>
+            <input type="text" id="Principal" name="ChaveCesar"><br>
+        </div><br>
+
+        <div id="Tradução">
+            <input type="radio" id="Codificar" name="Codificações" value="Codificar">
+            <label for="Codificar">Codificar</label>
+            <br>
+            <input type="radio" id="Decodificar" name="Codificações" value="Codificar">
+            <label for="Codificar">Decodificar</label>
+            <br>
+        </div>
+        </div><br>
+    </form>
+
+    <div>
+        <button type="submit" id="botao">Nova Mensagem</button><br>
+        <p id="Tradução">Tradução:</p>
+    </div>
 
 
 
