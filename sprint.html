@@ -6,44 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="sprint.js"></script>
-    <title>Decifre-me</title>
+    <link rel="stylesheet" href="home.css">
+    <title>Criptografia</title>
 </head>
 
 <body>
     <form>
-        <div class="formulario">
-            <label for="insercao">Codifique aqui! ⇓ </label><br>
-            <input type="text" id="insercao"><br><br>
-            <label>Escolha a codificação:</label><br><br>
-        </div>
+        <div class="formulario"><br>
+            <label for="insercao">Digite a mensagem aqui ⇩ </label><br>
+            <textarea cols="35" rows="5" type="text" id="insercao" required></textarea><br>
+            <label>Escolha um código:</label><br>
 
         <div id="codificacao">
             <select name="codigos" id="codigos">
-            <option value="Cifra">Cifra de César</option>
-            <option value="Base64">Base 64</option>
+            <option value="Dados">Selecione</option>
+            <option value="Cifra" id="Cifra">Cifra de César</option>
+            <option value="Base64" id="Base64">Base 64</option>
         </select><br><br>
 
-        <div id="EntradaPrincipal" style="display: none;">
-            <label for="Principal">Coloque uma entrada:</label><br><br>
+        <div id="EntradaPrincipal"style="display: none;">
+            <label for="Principal">Coloque uma entrada:</label><br>
             <input type="text" id="Principal" name="ChaveCesar"><br>
-        </div><br>
+        </div>
 
-        <div id="Tradução">
-            <input type="radio" id="Codificar" name="Codificações" value="Codificar">
+        <div id="Traducao">
+            <input type="radio" id="Codificar" name="Codificações" value="Codificar"  checked>
             <label for="Codificar">Codificar</label>
-            <br>
-            <input type="radio" id="Decodificar" name="Descodificações" value="Descodificar">
+            <input type="radio" id="Decodificar" name="Descodificações" value="Decodificar">
             <label for="Descodificar">Decodificar</label>
+            <br>
             <br>
         </div>
         </div><br>
-    </form>
 
     <div>
         <button type="submit" id="botao"><p id="resultadofinal">Nova Mensagem</p></button><br>
-        <p id="Traducao">Tradução:</p>
+        <p id="Traducao">Criptografia ⇩</p>
+        <textarea cols="35" rows="5" type="text" id="insercao" required></textarea><br>
     </div>
-
+</form>
 
 
 </body>
