@@ -5,48 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="sprint.js"></script>
-    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="./js/sprint.js"></script>
     <title>Criptografia</title>
 </head>
 
 <body>
-    <form>
-        <div class="formulario"><br>
-            <label for="insercao">Digite a mensagem aqui ⇩ </label><br>
-            <textarea cols="35" rows="5" type="text" id="insercao" required></textarea><br>
-            <label>Escolha um código:</label><br>
+    <div class="corpo">
+        <form>
+            <div><br>
+                <label for="insercao">Digite a mensagem aqui ⇩ </label><br><br>
+                <textarea cols="35" rows="5" type="text" id="insercao" required></textarea><br>
+                <label>Escolha um código ⇩</label>
+            </div>
 
-        <div id="codificacao">
-            <select name="codigos" id="codigos">
-            <option value="Dados">Selecione</option>
-            <option value="Cifra" id="Cifra">Cifra de César</option>
-            <option value="Base64" id="Base64">Base 64</option>
-        </select><br><br>
-
-        <div id="EntradaPrincipal"style="display: none;">
-            <label for="Principal">Coloque uma entrada:</label><br>
-            <input type="text" id="Principal" name="ChaveCesar"><br>
-        </div>
-
-        <div id="Traducao">
-            <input type="radio" id="Codificar" name="Codificações" value="Codificar"  checked>
-            <label for="Codificar">Codificar</label>
-            <input type="radio" id="Decodificar" name="Descodificações" value="Decodificar">
-            <label for="Descodificar">Decodificar</label>
+            <div id="codigos"><br>
+                <input type="radio" id="Cifra" class="tipodecodigo" onclick="habilitaEntrada()" name="Cifra"
+                    value="Cifra" checked>
+                <label for="codificar">Cifra de César</label>
+                <input type="radio" id="base" class="tipodecodigo" onclick="desabilitaEntrada()" name="Base"
+                    value="Base">
+                <label for="Codificar">Base 64</label><br>
+            </div>
             <br>
-            <br>
-        </div>
-        </div><br>
 
-    <div>
-        <button type="submit" id="botao"><p id="resultadofinal">Nova Mensagem</p></button><br>
-        <p id="Traducao">Criptografia ⇩</p>
-        <textarea cols="35" rows="5" type="text" id="insercao" required></textarea><br>
+            <div id="entradaPrincipal">
+                <label for="Principal">Coloque uma entrada⇩</label><br>
+                <input type="text" id="principal" name="ChaveCesar"><br>
+            </div>
+
+            <div id="Traducao"><br>
+                <input type="radio" id="codificar" onclick="criptografia()" name="Codificações" value="Codificar"
+                    checked>
+                <label for="codificar">Codificar</label>
+                <input type="radio" id="decodificar" onclick="descriptografia()" name="Codificações" value="Codificar">
+                <label for="Codificar">Decodificar</label>
+                <br>
+                <br>
+            </div>
+        </form>
+
+        <div>
+            <button id="botao">Nova Mensagem</button><br>
+            <p id="Traducao">Resultado ⇩</p>
+            <textarea cols="35" rows="5" type="text" id="resultado"></textarea><br>
+        </div>
     </div>
-</form>
-
 
 </body>
-
 </html>

@@ -1,12 +1,13 @@
 body{
     margin: 3%;
     padding: 0;
-    background: url(gif_good.gif);
+    background: url(../img/gif_good.gif);
     background-size: cover;
+    font-family: 'Indie Flower', cursive;
 }
 
 
-.formulario{
+.corpo{
 
     padding: 15px;
     color: rgb(238, 234, 236);
@@ -21,13 +22,14 @@ body{
     text-align: center;
     width: 30%;
     margin: auto;
-    margin-top: 5%;
+    margin-bottom: 5px;
     font-size: 20px;
 }
 
 
 #botao{
 
+    font-family: 'Indie Flower', cursive;
     background-color: rgb(220, 224, 220);
     font-size: 15px;
     width: auto;
