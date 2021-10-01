@@ -27,13 +27,24 @@ body{
 }
 
 
-#botao{
+
+
+.clicar{
 
     font-family: 'Indie Flower', cursive;
-    background-color: rgb(220, 224, 220);
-    font-size: 15px;
+    background: rgba(186, 189, 186, 0.425);
+    color: white;
+    font-size: 20px;
     width: auto;
     transition: 1s all;
     cursor: pointer;
-
+    font-weight: bold;
+    transition: 1s all;
+    border-radius: 5px;
 }
+
+.clicar:hover{
+    background: rgba(91, 92, 91, 0.425);
+    transform: scale(1.2);
+}
+
